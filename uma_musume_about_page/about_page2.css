@@ -1,0 +1,112 @@
+.main-about2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.about2-left {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+@keyframes scrollup {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+.loop-img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    animation: scrollup 50s linear infinite;
+}
+.loop-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0; /* ไม่บีบรูป */
+}
+
+.about2-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* gap: 10px; */
+    align-items: center;
+}
+
+.text-topic-about2 {
+    display: flex;
+    margin-top: 220px;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+}
+.text-topic-about2 p:first-child {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.text-topic-about2 p:last-child {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.box-topic-about2 {
+    display: flex;
+    margin-left: 240px;
+    margin-top: 40px;
+    width: 80%;
+    align-items: flex-start;
+    height: 100px;
+}
+.box-topic-about2 p {
+    font-size: 30px;
+    padding: 15px 15px;
+    background-color: black;
+    color: white;
+}
+
+.comment-about2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 160px;
+    margin-top: 50px;
+    width: 80%;
+    height: auto;
+    gap: 20px;
+}
+.comment-about2 p {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+.textwrap-about2 {
+    display: flex;
+    margin-top: 30px;
+    margin-left: -380px;
+    color: black;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+}
+.textwrap-about2:hover {
+    opacity: 0.6;
+}

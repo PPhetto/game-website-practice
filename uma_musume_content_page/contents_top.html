@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Index.css">
+    <link rel="stylesheet" href="contents_top.css">
+</head>
+<body>
+    <div id="header-contentstop"></div>
+    <div class="layout-contentstoppage">
+        <main class="main-contentstop">
+            <div class="left-contentstop">
+                <div class="topic-left-contents">
+                    <p>Contents コンテンツ</p>
+                </div>
+                <video id="video-contents-active" src="" muted loop autoplay></video>
+                <div class="name-left-contents">
+                    <p>Game</p>
+                    <p>ガ－ム</p>
+                </div>
+                <div class="name-left-contents">
+                    <p>Anime</p>
+                    <p>アニメ</p>
+                </div>
+                <div class="name-left-contents">
+                    <p>Music</p>
+                    <p>ミュージック</p>
+                </div>
+                <div class="name-left-contents">
+                    <p>Comics</p>
+                    <p>コミックス</p>
+                </div>
+                <div class="name-left-contents">
+                    <p>Event</p>
+                    <p>イベント</p>
+                </div>
+            </div>
+            <div class="right-contentstop">
+                <a href="game.html">
+                    <div class="container-right-contentstop">
+                        <p>
+                            Game
+                        </p>
+                        <p>
+                            ガ－ム
+                        </p>
+                    </div>
+                </a>
+                <a href="anime.html">
+                    <div class="container-right-contentstop">
+                        <p>
+                            Anime
+                        </p>
+                        <p>
+                            アニメ
+                        </p>
+                    </div>
+                </a>
+                <a href="musics.html">
+                    <div class="container-right-contentstop">
+                        <p>
+                            Music
+                        </p>
+                        <p>
+                            ミュージック
+                        </p>
+                    </div>
+                </a>
+                <a href="comics.html">
+                    <div class="container-right-contentstop">
+                        <p>
+                            Comics
+                        </p>
+                        <p>
+                            コミックス
+                        </p>
+                    </div>
+                </a>
+                <a href="event.html">
+                    <div class="container-right-contentstop">
+                        <p>
+                            Event
+                        </p>
+                        <p>
+                            イベント
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    <div id="footer-contentstop"></div>
+    <script>
+        const videoPlay = [
+            "../video/video-R_HMkF3G.mp4",
+            "../video/video-l3WFpvDF.mp4",
+            "../video/video-9qgWlAHJ.mp4",
+            "../video/video-6bN4yDqW.mp4",
+            "../video/video-KTlMQ9h0.mp4",
+        ]
+
+        const showVideo = document.getElementById("video-contents-active");
+        const startVideos = document.querySelectorAll(".container-right-contentstop");
+        const textvideos = document.querySelectorAll(".name-left-contents");
+
+        showVideo.src = videoPlay[0];
+        startVideos[0].classList.add("active");
+        textvideos[0].classList.add("active2");
+
+        startVideos.forEach((startVideo, i) => {
+            startVideo.addEventListener("mouseenter", () => {
+                document.querySelector(".active")?.classList.remove("active");
+                document.querySelector(".active2")?.classList.remove("active2");
+                startVideo.classList.add("active");
+                textvideos[i].classList.add("active2");
+                showVideo.src = videoPlay[i];
+                showVideo.load();
+            });
+        });
+
+        fetch("../Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-contentstop").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+        fetch("../Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-contentstop").innerHTML = html;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+.layout-gamepage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.video-gamepage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.video-gamepage video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.topic-gamepage {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    display: flex;
+    width: 400px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(-15deg);
+    background-color: #727F92;
+}
+.topic-gamepage p {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transform: skewX(15deg);
+}
+.connect-gamepage {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.img1 { width: 200px; height: 120px; }
+.img2 { width: 180px; height: 75px; }
+.img3 { width: 260px; height: 75px; }
+.img4 { width: 260px; height: 75px; }
+.img5 { width: 220px; height: 75px; }
+.img6 { width: 350px; height: 75px; }
+
+.img2:hover, .img3:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover {
+    opacity: 0.8;
+}
+
+.path-gamepage {
+    display: flex;
+    margin-left: 160px;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    gap: 10px;
+    align-items: center;
+}
+.path-gamepage a, p {
+    color: gray;
+    text-decoration: none;
+}
+.path-gamepage a:last-child {
+    color: black;
+    text-decoration: underline;
+}
+
+.list-gamepage {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 35px;
+}
+.list-gamepage a {
+    text-decoration: none;
+}
+.container-box-gamepage {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 360px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.container-box-gamepage img:first-child {
+    width: 95%;
+    margin: 10px;
+}
+
+.text-list-gamepage {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+.text-list-gamepage p:first-child {
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+.text-list-gamepage p:last-child {
+    color: gray;
+    margin: 0;
+    margin-top: 2.5px;
+    padding: 0;
+}
+
+.container-box-gamepage img:last-child {
+    width: 95%;
+}
+
+.container-box-gamepage:hover {
+    opacity: 0.5;
+}

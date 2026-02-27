@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="./uma_musume_about_page/about_page1.css">
+    <link rel="stylesheet" href="./uma_musume_about_page/about_page2.css">
+    <link rel="stylesheet" href="./uma_musume_about_page/about_page3.css">
+    <link rel="stylesheet" href="./uma_musume_about_page/about_page5.css">
+</head>
+<body>
+    <div id="header-about"></div>
+    <div id="pagination_about" class="pagination-di-container">
+        <!-- <div class="pagination-dot active"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div> -->
+    </div>
+    <main id="scroll-root">
+
+        <div class="video-content">
+            <video src="video/video-d0UxKFrf.mp4" muted autoplay loop></video>
+        </div>
+        <div id="sticky-content">
+            <div id="co1" class="di-1 main-container active"></div>
+            <div id="co2" class="di-2 main-container"></div>
+            <div id="co4" class="di-4 main-container"></div>
+            <div id="co5" class="di-5 main-container"></div>
+        </div>
+
+        <section class="trigger"></section>
+        <section class="trigger"></section>
+        <section class="trigger"></section>
+
+    </main>
+
+    <div id="footer-about"></div>
+    <script>
+// active-content
+        const paginations = document.querySelector(".pagination-di-container")
+        const contents = document.querySelectorAll(".main-container");
+        const videoContent = document.querySelector(".video-content");
+        let lastscrollY = 0;
+
+        contents.forEach((_, i) => {
+            const dot = document.createElement("div");
+            dot.classList.add("pagination-dot");
+
+            if (i === 0) {
+                dot.classList.add("active");
+            }
+
+            paginations.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll(".pagination-dot");
+
+        window.addEventListener("scroll", () => {
+            
+            const scrollY = window.scrollY; //จำนวนการเลื่อนของ scroll นับเป็น px
+            const vh = window.innerHeight; //ความสูง = ของจอ
+            const maxpos = vh;
+
+            const postop = Math.max(-maxpos, -scrollY);
+            videoContent.style.top = `${postop}px`;
+
+            let index;
+            
+            if (scrollY < maxpos) {
+                index = 0;
+            } else {
+
+                index = Math.floor(scrollY / vh);
+                const lastIndex = contents.length - 1;
+                const checklastpoint = lastIndex * vh;
+                
+                if (scrollY > lastscrollY && index >= lastIndex) {
+                    index = lastIndex;
+                }
+
+                if (scrollY >= checklastpoint) {
+                    index = lastIndex;
+                }
+                
+            }
+
+            contents.forEach(c => c.classList.remove("active"));
+            contents[index].classList.add("active");
+
+            dots.forEach(d => d.classList.remove("active"));
+            dots[index].classList.add("active");
+
+            lastscrollY = scrollY;
+
+        });
+// fetch-all
+        fetch("./uma_musume_about_page/about_page1.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("co1").innerHTML = html;
+            });
+        
+        fetch("./uma_musume_about_page/about_page2.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("co2").innerHTML = html;
+            });
+
+        fetch("./uma_musume_about_page/about_page3.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("co4").innerHTML = html;
+            });
+
+        fetch("./uma_musume_about_page/about_page5.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("co5").innerHTML = html;
+            });
+
+        fetch("Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-about").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+        
+        fetch("Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-about").innerHTML = html;
+            });
+    </script>
+</body>
+</html>

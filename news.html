@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container-news">
+        <div class="news-topic">
+            <div class="news-t1">
+                <p>News 新着情報</p>
+            </div>
+        </div>
+        <div class="news-topic-sup">
+            <a href="#" data-category="all">
+                <div class="news-b1">
+                    <p>全て</p>
+                </div>
+            </a>
+            <a href="#" data-category="Game">
+                <div class="news-b2">
+                    <p>Game</p>
+                </div>
+            </a>
+            <a href="#" data-category="Media">
+                <div class="news-b3">
+                    <p>Media</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="main-news-content">
+            <div class="news-content-in-left">
+                <ul id="card-news-list">
+                    <!-- data in js -->
+                </ul>
+                <div class="pagination" id="pagination">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-news"></div>
+
+    <script src="js/newsdata.js"></script>
+    <script>
+// call-js-info
+        const list = document.getElementById("card-news-list");
+        const pagination = document.getElementById("pagination");
+
+        const itemPerPage = 10;
+        let currentPage = 1;
+
+        function parseDate(str) {
+            const [datePart, timePart] = str.split(" ");
+            const [y, m, d] = datePart.split(".");
+            const [hh, mm] = timePart.split(":");
+
+            return new Date(y, m - 1, d, hh, mm);
+        }
+
+        const sortedNews = [...newsData].sort((a, b) => {
+            return parseDate(b.date) - parseDate(a.date);
+        });
+
+        // const latestNews = sortedNews.slice(0, 5);
+
+// console.log
+        sortedNews.forEach(n => {
+        console.log(n.date);
+        });
+
+        let filteredNews = [...sortedNews];
+
+        function renderNews(page) {
+            list.innerHTML = "";
+
+            const start = (page - 1) * itemPerPage;
+            const end = start + itemPerPage;
+            const pageItem = filteredNews.slice(start, end);
+
+            pageItem.forEach(n => {
+                list.innerHTML += `
+                <li>
+                    <a href="#">
+                        ${n.image ? `<img src="uma musume web try-to-do/${n.image}" alt="">` : ""}
+                        <dl>
+                            <dd>
+                                <label>${n.category}</label>
+                                <time>${n.date}</time>
+                            </dd>
+                            <dt>${n.title}</dt>
+                        </dl>
+                        <div class="more-info-content">
+                            詳細はコチラ >>
+                        </div>
+                    </a>
+                </li>
+                `;
+            });
+        }
+
+        function renderPagination() {
+            pagination.innerHTML = "";
+
+            const totalPages = Math.ceil(filteredNews.length / itemPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+
+                if (i === currentPage) {
+                    btn.classList.add("active");
+                }
+
+                btn.onclick = () => {
+                    currentPage = i;
+                    renderNews(currentPage);
+                    renderPagination();
+                    window.scroll({ top: 0, behavior: "smooth" });
+                };
+
+                pagination.appendChild(btn);
+            }
+        }
+
+        document.querySelectorAll(".news-topic-sup a").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+
+                const category = btn.dataset.category;
+                currentPage = 1;
+
+                if (category === "all") {
+                        filteredNews = [...sortedNews];
+                } else {
+                    filteredNews = sortedNews.filter(
+                        n => n.category === category
+                    );
+                }
+
+                renderNews(currentPage);
+                renderPagination();
+            });
+        });
+
+
+        document.querySelectorAll(".news-b1, .news-b2, .news-b3").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".news-b1, .news-b2, .news-b3")
+                    .forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            });
+        });
+
+        document.querySelector(".news-b1").classList.add("active");
+
+        renderNews(currentPage);
+        renderPagination();
+
+// fetch-all
+        fetch("Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-news").innerHTML = html;
+            });
+
+        fetch("Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+                
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+    </script>
+</body>
+</html>

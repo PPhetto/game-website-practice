@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+    <div id="header-goodspage"></div>
+    <div class="layout-goodspage">
+        <main>
+            <div class="topic-goodspage">
+                <div class="box-topic-goodspage">
+                    <p>Goods グッズ</p>
+                </div>
+            </div>
+            <div class="banner-cygame">
+                <a href="#">
+                    <div class="box-banner-cygame">
+                        <img src="uma musume web try-to-do/bnr_cystore-IPwEb5Wx.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="choice-pickup-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <p>全て</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>CD</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                Blu-ray DVD
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>書籍</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-information-joho">
+                <ul>
+                    <!-- <li>
+                        <a href="#">
+                            <div class="box-list-information">
+                                <img src="uma musume web try-to-do/YELL_NEWGATE_Blu-ray_top.webp" alt="">
+                            </div>
+                        </a>
+                        <span>fwffw</span>
+                        <p>『ウマ娘 プリティーダービー』WINNING LIVE 32</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box-list-information">
+                                <img src="uma musume web try-to-do/ウマ娘AW_Vol.02書影.webp" alt="">
+                            </div>
+                        </a>
+                        <span>fwffw</span>
+                        <p>『ウマ娘 プリティーダービー』WINNING LIVE 32</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="box-list-information">
+                                <img src="uma musume web try-to-do/WL24_jacket.webp" alt="">
+                            </div>
+                        </a>
+                        <span>fwffw</span>
+                        <p>『ウマ娘 プリティーダービー』WINNING LIVE 32</p>
+                    </li> -->
+                </ul>
+                <div class="pagination" id="pagination">
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="footer-goodspage"></div>
+    <script src="js/goodsdata.js"></script>
+    <script>
+        const goodslist = document.querySelector(".list-information-joho ul");
+        const pagination = document.getElementById("pagination");
+        const typeitemslist = document.querySelectorAll(".choice-pickup-menu ul li");
+        const itemsperpage = 16;
+        let currentpage = 1;
+        let selectdata = goodsdata;
+
+        function rendergoods(page) {
+            const str = (page - 1) * itemsperpage;
+            const end = str + itemsperpage;
+            const pageitems = selectdata.slice(str, end)
+
+            let html = "";
+
+            pageitems.forEach(item => {
+                html +=`
+                    <li>
+                        <a href="#">
+                            <div class="box-list-information">
+                                <img src="${item.image}" alt="">
+                            </div>
+                        </a>
+                        <span>${item.category}</span>
+                        <p>${item.description}</p>
+                    </li>
+                `;
+            });
+
+            goodslist.innerHTML = html;
+        }
+
+        function renderPagination() {
+            pagination.innerHTML = "";
+
+            const totalPages = Math.ceil(selectdata.length / itemsperpage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+
+                if (i === currentpage) {
+                    btn.classList.add("active");
+                }
+
+                btn.onclick = () => {
+                    currentpage = i;
+                    rendergoods(currentpage);
+                    renderPagination();
+                    window.scroll({ top: 0, behavior: "smooth" });
+                };
+
+                pagination.appendChild(btn);
+            }
+        }
+
+        typeitemslist.forEach(type => {
+            type.addEventListener("click", (e) => {
+                e.preventDefault();
+                typeitemslist.forEach(a => a.classList.remove("active"));
+                type.classList.add("active");
+
+                const category = type.textContent.trim();
+
+                if (category === "全て") {
+                    selectdata = goodsdata;
+                } else {
+                    selectdata = goodsdata.filter(item =>
+                        item.category === category
+                    );
+                }
+                currentpage = 1;
+                rendergoods(currentpage);
+                renderPagination();
+            });
+        });
+
+        rendergoods(currentpage);
+        renderPagination();
+
+        fetch("Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-goodspage").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+        fetch("Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-goodspage").innerHTML = html;
+            });
+    </script>
+</body>
+</html>

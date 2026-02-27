@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comics.css">
+    <link rel="stylesheet" href="../css/Index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="layout-content-comics">
+        <div id="header-comics"></div>
+        
+        <div class="main-comics">
+            <main>
+                <div class="video-content-comics">
+                    <video src="../video/video-6bN4yDqW.mp4" muted autoplay loop></video>
+                    <div class="video-topic-comics">
+                        <p>Comics コミックス</p>
+                    </div>
+                </div>
+
+                <div class="path-content-comics">
+                    <div class="path-container">
+                        <a href="../index.html">Top</a>
+                        <p>></p>
+                        <a href="contents_top.html">Contents</a>
+                        <p>></p>
+                        <a href="#">Comics</a>
+                    </div>
+                </div>
+
+                <div class="comics-contents">
+
+                    <div class="content1-comics">
+                        <img src="../uma musume web try-to-do/comics_04.webp" alt="">
+                        <div class="title-content1">
+                            <p>破天荒なウマ娘「ゴールドシップ」が主人公のギャグ漫画です。</p>
+                            <p>幼稚園児になったゴールドシップがどんな嵐を巻き起こすのか。</p>
+                        </div>
+                        <a href="#">
+                            <div class="button-content1">
+                                <p>試し読み・購入はこちら >></p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content2-comics">
+                        <img src="../uma musume web try-to-do/comics_03.webp" alt="">
+                        <div class="title-content2">
+                            <p>ウマ娘たちが、日常やちょっと特別な時に食べる</p>
+                            <p>“おいしいひとしな“をめしあがれ♪</p>
+                        </div>
+                        <a href="#">
+                            <div class="button-content2">
+                                <p>試し読み・購入はこちら >></p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content3-comics">
+                        <img src="../uma musume web try-to-do/comics_02.webp" alt="">
+                        <div class="title-content3">
+                            <p>見習いトレーナー・椿が出会ったのは、</p>
+                            <p>ガラスの脚を抱えたデビュー前のウマ娘・サクラローレル。</p>
+                            <p>半人前の2人が見た頂点への夢は、無謀なのか━━。</p>
+                            <p>何度散っても再び芽吹く不屈の物語、開幕！</p>
+                        </div>
+                        <a href="#">
+                            <div class="button-content3">
+                                <p>試し読み・購入はこちら >></p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content4-comics">
+                        <img src="../uma musume web try-to-do/comics_01.webp" alt="">
+                        <div class="title-content4">
+                            <p>寂れたカサマツの地に現れた、ひとりの灰被りの少女。</p>
+                            <p>後に“怪物”と呼ばれるその少女は、どこを目指して疾るのかーー。</p>
+                            <p>地方から中央の伝説へ。青春“駆ける”シンデレラストーリー、遂に出走！！</p>
+                        </div>
+                        <a href="#">
+                            <div class="button-content4">
+                                <p>試し読み・購入はこちら >></p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="banner-starting-gate">
+                    <a href="#">
+                        <div class="banner-comics">
+                            <img src="../uma musume web try-to-do/bnr_starting-gate-PoPNuTAB.webp" alt="">
+                        </div>
+                    </a>
+                </div>
+            </main>
+        </div>
+
+        <div id="footer-comics"></div>
+    </div>
+
+    <script>
+        fetch("../Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-comics").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+
+        fetch("../Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-comics").innerHTML = html;
+        });
+    </script>
+</body>
+</html>

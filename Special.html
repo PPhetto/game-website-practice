@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+    <div id="header-special"></div>
+    <div class="layout-specialpage">
+        <main>
+            <div class="topic-specialpage">
+                <h1>Special スペシャル</h1>
+            </div>
+            <div class="list-grid-contents-specialpage">
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special_travelpopupstore.webp" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special_realdgame2.webp" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special_gochiweek.webp" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special_hachauma.webp" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special Paka Tube_banner.webp" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="list-specialpage">
+                        <img src="uma musume web try-to-do/special twinkle_banner.webp" alt="">
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    <div id="footer-special"></div>
+
+    <script>
+        fetch("Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-special").innerHTML = html;
+                document.getElementById("navbar").classList.add("show");
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+            });
+        fetch("Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-special").innerHTML = html;
+            });
+    </script>
+</body>
+</html>

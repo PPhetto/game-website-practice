@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f3f3f3;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        text-align: left;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        padding: 20px;
+        margin: 20px auto;
+        width: 30%;
+    }
+    label {
+        font-weight: bold;
+    }
+    input, select, textarea {
+        width: 95%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .buttonregis {
+        background-color: #2b9cd8;
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 60%;
+    }
+
+    th, td {
+        border: 1px solid #333;
+        padding: 10px;
+    }
+    th {
+        background: #2b9cd8;
+        color: white;
+    }
+
+</style>
+<body>
+    <h1>Lesson 4 - Form & Tables</h1>
+    <h3>User Register Form</h3>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter Your Name">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter Your Email">
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Your Password">
+
+        <label>Favorite Vtuber:</label>
+        <select>
+            <option value="Suisei">Hoshimachi Suisei</option>
+            <option value="Miko">Sakura Miko</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea rows="4" placeholder="Say Something!"></textarea>
+
+        <button type="submit" class="buttonregis">Register</button>
+    </form>
+
+    <h2>User Table Example</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>Suisei</td>
+            <td>18</td>
+            <td>Japan</td>
+        </tr>
+        <tr>
+            <td>Miko</td>
+            <td>18</td>
+            <td>Japan</td>
+        </tr>
+    </table>
+</body>
+</html>

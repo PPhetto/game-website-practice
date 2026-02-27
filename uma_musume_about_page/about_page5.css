@@ -1,0 +1,45 @@
+.content-of-page-page3-about {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%;
+    height: 100%; */
+    width: 100vw;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../uma musume web try-to-do/Screenshot\ 2025-12-26\ 192410.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container-content-page3-about {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(-15deg);
+    background-color: white;
+}
+.content-main-page3-about {
+    transform: skewX(15deg);
+    color: #1F4BE8;
+    font-size: 20px;
+}
+.content-topic-page3-about {
+    position: absolute;
+    display: flex;
+    top: -50px;
+    left: -50px;
+    width: 450px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F4BE8;
+}
+.content-topic-page3-about p {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}

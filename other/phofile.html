@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer";
+
+        grid-template-rows: auto 1fr auto auto;
+        text-align: center;
+    }
+    footer {
+        grid-area: footer;
+        background-color: gray;
+        color: white;
+        padding: 20px;
+    }
+    header {
+        grid-area: header;
+        background-color: skyblue;
+        color: black;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+    }
+    main {
+        grid-area: main;
+        background-color: aquamarine;
+        padding: 20px;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    article {
+        background-color: white;
+        border-radius: 10px;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    aside {
+        grid-area: aside;
+        background-color: azure;
+        padding: 20px;
+    }
+    li {
+        list-style: none;
+    }
+</style>
+<body>
+    <header>
+        <h1>Welcome to My WebSite</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>About Me!</h2>
+        <p>Hi! I’m <strong>Thanachot</strong>, an IT student who loves <em>Hoshimachi Suisei</em>!</p>
+        <h2>My Favorites</h2>
+        <section>
+            <article>
+                <h3>Vtuber</h3>
+                <img style="width: 100%; border-radius: 10px;" src="Pic/unnamed.jpg" alt="Suisei">
+                <p>Hoshimachi Suisei — My inspiration ⭐</p>
+            </article>
+            <article>
+                <h3>Vtuber</h3>
+                <img style="width: 100%; border-radius: 10px;" src="Pic/channels4_profile.jpg" alt="Miko">
+                <p>Hoshimachi Suisei — My inspiration 🌸</p>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <h2>Follow My Favorite Vtubers</h2>
+            <ul>
+                <li><a href="">Suisei Channel</a></li>
+                <li><a href="">Mikko Channel</a></li>
+            </ul>
+    </aside>
+    <footer>
+        <p>© 2025 Thanachot - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

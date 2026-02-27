@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Layout</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            width: 100%;
+        }
+        .logo-first {
+            width: 200px;
+            height: auto;
+        }
+
+        /* MAIN LAYOUT */
+        .main {
+            display: flex;
+            width: 100%;
+            height: 800px;
+            background-color: aquamarine;
+        }
+
+        /* CONTENT BOX TEMPLATE */
+        .content-box {
+            position: relative;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* สีแต่ละช่อง */
+        .box1 { background-color: palevioletred; }
+        .box2 { background-color: steelblue; }
+        .box3 { background-color: yellow; }
+        .box4 { background-color: violet; }
+        .box5 { background-color: skyblue; }
+
+        /* IMG ใน content1 */
+        .img-uma {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .button-for-content {
+            position: absolute;
+            bottom: 0;
+            height: 150px;
+            width: 100%;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img class="logo-first" src="Pic/Uma_Musume_Pretty_Derby_JP_Logo.webp" alt="">
+    </div>
+
+    <div class="main">
+        <div class="content-box box1">
+            <img class="img-uma" src="Pic/Orfevre_29z.webp" alt="">
+            <div class="button-for-content"></div>
+        </div>
+
+        <div class="content-box box2">
+            <div class="button-for-content"></div>
+        </div>
+
+        <div class="content-box box3">
+            <div class="button-for-content"></div>
+        </div>
+
+        <div class="content-box box4">
+            <div class="button-for-content"></div>
+        </div>
+
+        <div class="content-box box5">
+            <div class="button-for-content"></div>
+        </div>
+    </div>
+
+</body>
+</html>

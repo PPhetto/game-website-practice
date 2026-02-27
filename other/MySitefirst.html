@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            background-color: white;
+            height: auto;
+            width: 100%;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        .logo-first {
+            width: 200px;
+            height: 100px;
+        }
+
+        .main {
+            display: flex;
+            background-color: aquamarine;
+            width: 100%;
+            height: 1000px;
+        }
+        .content-box {
+            position: relative;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 { background-color: orange; }
+        .box2 { background-color: palevioletred; }
+        .box3 { background-color: mediumspringgreen; }
+        .box4 { background-color: greenyellow; }
+        .box5 { background-color: red; }
+
+        .img-uma {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .name-uma {
+            color: black;
+        }
+        .main-2 {
+            text-align: center;
+            background-color: white;
+        }
+        .story {
+            font-size: 14px;
+        }
+
+        .button-info {
+            margin-top: 20px;
+            background-color: steelblue;
+            color: white;
+            border: none;
+
+            width: 200px;
+            height: 50px;
+
+            font-size: 20px;
+
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo-first" src="Pic/Uma_Musume_Pretty_Derby_JP_Logo.webp" alt="">
+    </div>
+    <div class="main">
+        <div class="content-box box1">
+            <img class="img-uma" src="Pic/Orfevre_29z.webp" alt="">
+        </div>
+        <div class="content-box box2">
+            <img class="img-uma" src="Pic/Still_in_Love_29.webp" alt="">
+        </div>
+        <div class="content-box box3">
+            <img class="img-uma" src="Pic/Satono_Diamond_29.webp" alt="">
+        </div>
+        <div class="content-box box4">
+            <img class="img-uma" src="Pic/Silence_Suzuka_29.webp" alt="">
+        </div>
+        <div class="content-box box5">
+            <img class="img-uma" src="Pic/Duramente_29.webp" alt="">
+        </div>
+    </div>
+    <div class="main main-2">
+        <div class="content-box">
+            <h1 class="name-uma">Orfevre</h1>
+            <p class="story">Orfevre เกิดปี 2008 ถือเป็นหนึ่งในม้าที่เก่งที่สุดในประวัติศาสตร์ญี่ปุ่น ด้วยความสามารถที่เหนือชั้นทำให้เขาคว้า Triple Crown ปี 2011 ตั้งแต่อายุยังน้อย สไตล์การวิ่งของ Orfevre มีเอกลักษณ์ คือความเร็วปลายที่รุนแรงแบบพลิกเกมได้เสมอ แต่จุดอ่อนคือเป็นม้าที่อารมณ์ร้อนและควบคุมยาก ทำให้บางครั้งฟอร์มอาจไม่เสถียร
+                แม้จะพลาดคว้าแชมป์ Prix de l’Arc de Triomphe ปี 2012 ไปอย่างน่าเสียดาย แต่ความสามารถโดยรวมยังคงทำให้เขาถูกมองว่าเป็นหนึ่งในม้าที่มีพรสวรรค์ที่สุดเท่าที่ญี่ปุ่นเคยมีมา</p>
+            <button class="button-info" onclick="window.open('https://umamusume.jp/character/orfevre', '_blank')">
+                Infomation
+            </button>
+        </div>
+        <div class="content-box">
+            <h1 class="name-uma">Still in love</h1>
+            <p class="story">Still in Love เกิดปี 2000 และเป็นหนึ่งในม้าเมียที่โดดเด่นที่สุดตลอดกาล ด้วยผลงานที่คว้าแชมป์ Japanese Fillies Triple Crown ปี 2003 ครบทั้งสามสนาม ได้แก่ Oka Sho, Yushun Himba และ Shuka Sho
+                เธอมีบุคลิกสงบนิ่งและรักษาฟอร์มได้ดีตลอดฤดูกาล แม้หลังจากจบการแข่งจะไม่ได้มีผลงานโดดเด่นเท่าไรในฐานะแม่พันธุ์ แต่ในช่วงที่ยังแข่งขันอยู่เธอถือเป็นสัญลักษณ์ของความแข็งแกร่งและความสม่ำเสมอในม้าเพศเมียของญี่ปุ่น</p>
+            <button class="button-info" onclick="window.open('https://umamusume.jp/character/stillinlove', '_blank')">
+                Infomation
+            </button>
+        </div>
+        <div class="content-box">
+            <h1 class="name-uma">Satono Daimond</h1>
+            <p class="story">Satono Diamond เกิดปี 2013 มาจากตระกูลชั้นสูงและถูกคาดหวังตั้งแต่ยังเด็ก เขาเริ่มต้นอาชีพด้วยผลงานสวยงามและกลายเป็นหนึ่งในม้าที่ได้รับความนิยมที่สุด ด้วยฝีเท้าที่แข็งแกร่งและความสม่ำเสมอ
+                ผลงานเด่นที่สุดคือการคว้าแชมป์ Arima Kinen ปี 2016 ซึ่งเป็นรายการใหญ่ที่สุดของปลายปีในญี่ปุ่น
+                Satono Diamond ไม่ได้มีสไตล์ดุเดือดแบบ Orfevre แต่เป็นม้าที่มีความนิ่ง วิ่งมีวินัย เหมาะกับระยะไกล และถือเป็นหนึ่งในความภาคภูมิใจของคอก Satono</p>
+            <button class="button-info" onclick="window.open('https://umamusume.jp/character/satonodiamond', '_blank')">
+                Infomation
+            </button>
+        </div>
+        <div class="content-box">
+            <h1 class="name-uma">Silence Suzuka</h1>
+            <p class="story">Silence Suzuka เกิดปี 1994 และเป็นหนึ่งในม้าที่มีสไตล์การวิ่งโดดเด่นที่สุดในประวัติศาสตร์ เขาคือ "เทพเจ้าสายจรวด" ของญี่ปุ่น ด้วยความเร็วต้นที่รุนแรงเกินกว่าม้าตัวไหนจะไล่ทัน เรียกได้ว่าเป็นม้าหนีที่สมบูรณ์แบบที่สุดตัวหนึ่ง
+                น่าเสียดายที่ตำนานของเขาต้องจบลงอย่างเร็วเกินไปจากอุบัติเหตุในรายการ Tenno Sho (Autumn) ปี 1998 ซึ่งทำให้เขากลายเป็นภาพจำของแฟน ๆ ในฐานะ “สุดยอดม้าที่เร็วที่สุดเท่าที่ญี่ปุ่นเคยมี” แม้จะไม่มีโอกาสสร้างสถิติยาวนานก็ตาม</p>
+            <button class="button-info" onclick="window.open('https://umamusume.jp/character/silencesuzuka', '_blank')">
+                Infomation
+            </button>
+        </div>
+        <div class="content-box">
+            <h1 class="name-uma">Duramente</h1>
+            <p class="story">Duramente เกิดปี 2012 และมีฝีเท้าที่โดดเด่นตั้งแต่ช่วงเริ่มแข่ง เขาคว้าแชมป์ Satsuki Sho และ Tokyo Yushun ปี 2015 ทำให้เป็นแชมป์ Derby ที่หลายคนพูดถึงเรื่องความเร็วและกำลัง
+                อย่างไรก็ตาม Duramente เป็นม้าที่มีปัญหาการบาดเจ็บบ่อย ทำให้เส้นทางอาชีพถูกจำกัด ไม่ได้วิ่งนานเท่าที่ควร แม้กระทั่งตอนที่ฟอร์มกำลังพุ่งสูง เขาจึงเป็นทั้ง "อัจฉริยะ" และ "ผู้โชคร้าย" ในเวลาเดียวกัน
+                หลังรีไทร์ เขากลายเป็นพ่อพันธุ์ที่มีลูกหลานเด่นหลายตัว และยังคงมีอิทธิพลในวงการเพาะพันธุ์จนถึงปัจจุบัน</p>
+            <button class="button-info" onclick="window.open('https://umamusume.jp/character/duramente', '_blank')">
+                Infomation
+            </button>
+        </div>
+    </div>
+    <!-- <div class="footer">
+
+    </div> -->
+</body>
+</html>

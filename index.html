@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="header">
+        <div class="header-menu">
+            <div class="header-icon-logo">
+                UMAMUSUME<br>PROJECT
+            </div>
+                <ul class="header-menu-ul-1">
+                    <li><a href="news.html">New</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <div class="content-navbar">
+                            <div class="content-navbar-topic">
+                                <a id="contents-show" href="#">Content</a>
+                            </div>
+                            <div class="content-navbar-in">
+                                <div class="layout-ul-innavbar">
+                                    <ul>
+                                        <li><a href="uma_musume_content_page/contents_top.html">Content Top</a></li>
+                                        <li><a href="uma_musume_content_page/game.html">Game</a></li>
+                                        <li><a href="uma_musume_content_page/anime.html">Anime</a></li>
+                                        <li><a href="uma_musume_content_page/musics.html">Music</a></li>
+                                        <li><a href="uma_musume_content_page/comics.html">Comics</a></li>
+                                        <li><a href="uma_musume_content_page/event.html">Event</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="character.html">Character</a></li>
+                    <li><a href="Special.html">Special</a></li>
+                    <li><a href="goods.html">Goods</a></li>
+                    <li><a href="https://webstore.cygames.com/umamusume/">Webstore</a></li>
+                </ul>
+                <div class="box-div-official">
+                    <p>Official SNS</p>
+                </div>
+                <div class="box-div-sns">
+                    <a class="box-icon" href="#"><img class="icon-sns-x" src="uma musume web try-to-do/X-Logo.png" alt="X"></a>
+                    <a class="box-icon" href="#"><img class="icon-sns-ytb" src="uma musume web try-to-do/Logo-Youtube-PNG-Images.png" alt=""></a>
+                    <a class="box-icon" href="#"><img class="icon-sns-ttk" src="uma musume web try-to-do/ttk.png" alt=""></a>
+                </div>
+        </div>
+        <div class="header-content">
+            <a href="https://webstore.cygames.com/umamusume/">
+                <div class="img-official">
+                    <img src="uma musume web try-to-do/kv_cygamesid_off-e0lDHPdS.png" alt="">
+                </div>
+            </a>
+            <img class="img-logo" src="uma musume web try-to-do/logo_umamusume-n9Ls3QRE.png" alt="logo-uma">
+            <p class="text-banner">UMAMUSUME: PRETTY DERBY</p>
+            <p class="text-banner-2">SCROLL</p>
+            <img class="img-banner" src="uma musume web try-to-do/kv_pc.webp" alt="banner-uma">
+        </div>
+    </div>
+    <div class="main-content-1">
+        <button class="button-left" onclick="slidePrev()">◀</button>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="box-img">
+                        <img src="uma musume web try-to-do/slider.webp" alt="">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="box-img">
+                        <img src="uma musume web try-to-do/slider_star-blossom_comics-5.webp" alt="">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="box-img">
+                        <img src="uma musume web try-to-do/slider_golshi-chan_comics6.webp" alt="">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="box-img">
+                        <img src="uma musume web try-to-do/slider_cinderellagray2.webp" alt="">
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <button class="button-right" onclick="slideNext()">▶</button>
+    </div>
+    <div class="main-content-2">
+        <div class="Left-content-main2">
+            <div class="topic-content-text-0">
+                <p>News 新着情報</p>
+            </div>
+            <div class="content-in-left">
+                <ul id="card-news-list">
+                    <!-- data in js -->
+                </ul>
+            </div>
+            <div class="content-in-left-2">
+                <p class="button-content-2"><a href="news.html">View More</a></p>
+            </div>
+        </div>
+        <div class="right-content-main2">
+
+            <div class="topic-content-text">
+                <p>About ウマ娘について</p>
+            </div>
+            <div class="top-content">
+                <a href="uma_musume_about.html">
+                    <img src="uma musume web try-to-do/img_about-5MztnACm.jpg" alt="">
+                </a>
+                <!-- <img src="uma musume web try-to-do/img_about-5MztnACm.jpg" alt=""> -->
+            </div>
+
+            <div class="topic-content-text-2">
+                <p>Contents コンテンツ </p>
+            </div>
+            <div class="bot-content">
+                <img src="uma musume web try-to-do/img_contents-XnXMJqLw.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-content-3">
+        <div class="topic-content-text-3">
+            <p>Character キャラクター</p>
+        </div>
+        <div class="character-content-list">
+            <div class="sub-1">
+                <a href="#">
+                    <div class="sub-2">
+                        <ul>
+                            <li class="big a">
+                                <div class="character-1">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-1-bg-1">
+                                        <div class="char-1-bg-2"></div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small b">
+                                <div class="character-2">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-2-bg-1">
+                                        <div class="char-2-bg-2"></div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small b">
+                                <div class="character-3">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-3-bg-1">
+                                        <div class="char-3-bg-2"></div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </li>
+                        <li class="small d">
+                            <div class="character-4">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-4-bg-1">
+                                    <div class="char-4-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small e">
+                            <div class="character-5">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-5-bg-1">
+                                    <div class="char-5-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small f">
+                            <div class="character-6">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-6-bg-1">
+                                    <div class="char-6-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small g">
+                            <div class="character-7">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-7-bg-1">
+                                    <div class="char-7-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="big h">
+                            <div class="character-8">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-8-bg-1">
+                                    <div class="char-8-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small i">
+                            <div class="character-9">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-9-bg-1">
+                                    <div class="char-9-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small j">
+                            <div class="character-10">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-10-bg-1">
+                                    <div class="char-10-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small k">
+                            <div class="character-11">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-11-bg-1">
+                                    <div class="char-11-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small l">
+                            <div class="character-12">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-12-bg-1">
+                                    <div class="char-12-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small m">
+                            <div class="character-13">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-13-bg-1">
+                                    <div class="char-13-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small n">
+                            <div class="character-14">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-14-bg-1">
+                                    <div class="char-14-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="small o">
+                            <div class="character-15">
+                                <div>
+                                    <picture>
+                                        <source>
+                                        <img src="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="char-15-bg-1">
+                                    <div class="char-15-bg-2"></div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                            <!-- <li class="big a">
+                                <div class="character-1">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/sakurabakushino_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-1-bg-1">
+                                        <div class="char-1-bg-2"></div>
+                                        <p>Sakura Bakushin O</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small b">
+                                <div class="character-2">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/satonodiamond_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-2-bg-1">
+                                        <div class="char-2-bg-2"></div>
+                                        <p>Satono Diamond</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small c">
+                                <div class="character-3">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/oguricap_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-3-bg-1">
+                                        <div class="char-3-bg-2"></div>
+                                        <p>Oguri Cap</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small d">
+                                <div class="character-4">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/royceandroyce_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-4-bg-1">
+                                        <div class="char-4-bg-2"></div>
+                                        <p>Royce and Royce</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small e">
+                                <div class="character-5">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/verxina_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-5-bg-1">
+                                        <div class="char-5-bg-2"></div>
+                                        <p>Verxina</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small f">
+                                <div class="character-6">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/silencesuzuka_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-6-bg-1">
+                                        <div class="char-6-bg-2"></div>
+                                        <p>Silence Suzuka</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small g">
+                                <div class="character-7">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/satonocrown_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-7-bg-1">
+                                        <div class="char-7-bg-2"></div>
+                                        <p>Satono Crown</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="big h">
+                                <div class="character-8">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/duramente_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-8-bg-1">
+                                        <div class="char-8-bg-2"></div>
+                                        <p>Duramente</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small i">
+                                <div class="character-9">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/mejiroardan_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-9-bg-1">
+                                        <div class="char-9-bg-2"></div>
+                                        <p>Mejiro Ardan</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small j">
+                                <div class="character-10">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/tokaiteio_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-10-bg-1">
+                                        <div class="char-10-bg-2"></div>
+                                        <p>Tokai Teio</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small k">
+                                <div class="character-11">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/almondeye_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-11-bg-1">
+                                        <div class="char-11-bg-2"></div>
+                                        <p>Almond Eye</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small l">
+                                <div class="character-12">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/stillinlove_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-12-bg-1">
+                                        <div class="char-12-bg-2"></div>
+                                        <p>Still in Love</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small m">
+                                <div class="character-13">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/chronogenesis_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-13-bg-1">
+                                        <div class="char-13-bg-2"></div>
+                                        <p>Chrono Genesis</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small n">
+                                <div class="character-14">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/mejiromcqueen_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-14-bg-1">
+                                        <div class="char-14-bg-2"></div>
+                                        <p>Mejiro McQueen</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="small o">
+                                <div class="character-15">
+                                    <div>
+                                        <picture>
+                                            <source>
+                                            <img src="uma musume web try-to-do/gentildonna_top.webp" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="char-15-bg-1">
+                                        <div class="char-15-bg-2"></div>
+                                        <p>Gentildonna</p>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-1">
+        <div class="box-footer-content">
+            <div class="hidden-box-footer">
+                <div class="topic-footer-2 bgt-1">
+                    <p>Special スペシャル</p>
+                </div>
+                <a href="#">
+                    <div class="left-content-footer">
+                        <img src="uma musume web try-to-do/img_special-al5A2Kph.jpg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="hidden-box-footer">
+                <div class="topic-footer-2 bgt-2">
+                    <p>Goods グッズ</p>
+                </div>
+                <a href="#">
+                    <div class="right-content-footer">
+                        <img src="uma musume web try-to-do/img_goods-lXA5DrVa (1).jpg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-main"></div>
+
+    <!-- script -->
+     <script src="js/newsdata.js"></script>
+     <script src="js/characterdata.js"></script>
+     <script>
+        const ctn_show = document.getElementById("contents-show")
+        const ctn_in = document.querySelector(".content-navbar-in");
+
+        ctn_show.addEventListener("click", (c) => {
+            c.preventDefault();
+            ctn_in.classList.toggle("active");
+        });
+// call-js-info
+        const list = document.getElementById("card-news-list");
+
+        function parseDate(str) {
+            const [datePart, timePart] = str.split(" ");
+            const [y, m, d] = datePart.split(".");
+            const [hh, mm] = timePart.split(":");
+
+            return new Date(y, m - 1, d, hh, mm);
+        }
+
+        const sortedNews = [...newsData].sort((a, b) => {
+            return parseDate(b.date) - parseDate(a.date);
+        });
+
+        const latestNews = sortedNews.slice(0, 5);
+
+// console.log
+        sortedNews.forEach(n => {
+        console.log(n.date);
+        });
+
+        latestNews.forEach(n => {
+            list.innerHTML += `
+            <li>
+                <a href="#">
+                    ${n.image ? `<img src="uma musume web try-to-do/${n.image}" alt="">` : ""}
+                    <dl>
+                        <dd>
+                        <label>${n.category}</label>
+                        <time>${n.date}</time>
+                        </dd>
+                        <dt>
+                        ${n.title}
+                        </dt>
+                    </dl>
+                    <div class="more-info-content">
+                        詳細はコチラ >>
+                    </div>
+                </a>
+            </li>
+            `;
+        });
+        
+// img-change
+        const box = document.querySelector(".img-official");
+        const img = box.querySelector("img");
+        const off = "uma musume web try-to-do/kv_cygamesid_off-e0lDHPdS.png";
+        const on = "uma musume web try-to-do/kv_cygamesid_on-1kpbbryz.png";
+
+        box.addEventListener("mouseenter", () => {
+            img.src = on;
+        });
+        box.addEventListener("mouseleave", () => {
+            img.src = off;
+        });
+
+// jscharacterdata import
+    const copydata = shuffle([...characterdata]);
+    const itemchar = document.querySelectorAll('.sub-2 ul li');
+
+    itemchar.forEach((char, dex) => {
+        const data = copydata[dex % copydata.length];
+        const img = char.querySelector('img');
+        const nameEl = char.querySelector('p');
+        const bg1 = nameEl.parentElement;
+        const bg2 = bg1.querySelector('div');
+
+        img.src = data.imageChar;
+        nameEl.textContent = data.nameChar;
+
+        bg1.style.backgroundColor = data.boxcolor2;
+        bg2.style.backgroundColor = data.boxcolor1;
+    });
+    function shuffle(info) {
+        for (let i = info.length - 1; i > 0; i--) {
+            const r = Math.floor(Math.random() * (i + 1));
+            [info[i], info[r]] = [info[r], info[i]];
+        }
+        return info;
+    }
+
+// fetch-all
+        fetch("Fetch/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-main").innerHTML = html;
+            });
+
+        fetch("Fetch/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+
+                const dpContentnavbar = document.getElementById("content-dropdown");
+                const showDropdrow = document.querySelector(".navbar-of-content");
+
+                dpContentnavbar.addEventListener("click", (c) => {
+                    c.preventDefault();
+                    showDropdrow.classList.toggle("active");
+                });
+
+                window.addEventListener("scroll", () => {
+                    const navbar = document.getElementById("navbar");
+
+                    if (window.scrollY > 850) {
+                        navbar.classList.add("show");
+                    } else {
+                        navbar.classList.remove("show");
+                    }
+                });
+            });
+
+
+
+// slide-list เข้าใจแล้ว
+        const news = [
+            "uma musume web try-to-do/slider.webp",
+            "uma musume web try-to-do/slider_star-blossom_comics-5.webp",
+            "uma musume web try-to-do/slider_golshi-chan_comics6.webp",
+            "uma musume web try-to-do/slider_cinderellagray2.webp",
+            "uma musume web try-to-do/slider_umamusumesi_comics-6.webp",
+            "uma musume web try-to-do/slider_cinderella-gray_comics-21_s_A.webp"
+        ]
+
+        const show = 4; //show ที่ละกี่รูป
+        let start = 0; //index เริ่มต้น
+
+        const  imgCount = document.querySelectorAll(".main-content-1 ul li img");
+
+        function render() {
+            for (let i = 0; i < show; i++) {
+                let index = (start + i) % news.length;
+                imgCount[i].src = news[index];
+            }
+        }
+
+        function slideNext() {
+            start = (start + 1) % news.length;
+            render();
+        }
+        function slidePrev() {
+            start = (start - 1 + news.length) % news.length;
+            render();
+        }
+
+        render()
+     </script>
+</body>
+</html>

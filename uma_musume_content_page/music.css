@@ -1,0 +1,212 @@
+/* body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f2eeff;
+} */
+/* section1 */
+.layout-content-musics-page {
+    width: 100%;
+    height: 100vh;
+}
+.banner-content-musics-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.topic-musics-page {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    width: 450px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-15deg);
+    background-color: #f2eeff;
+}
+.topic-musics-page p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* section2 */
+.path-content-musics-page {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+}
+.sec2-content {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding-left: 100px;
+    /* margin-left: 100px; */
+    align-items: center;
+    gap: 10px;
+    /* background-color: aquamarine; */
+}
+.sec2-content a {
+    color: gray;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sec2-content a:last-child {
+    color: black;
+    text-decoration: underline;
+}
+.sec2-content a:hover {
+    text-decoration: underline;
+}
+.sec2-content p {
+    color: gray;
+}
+
+/* section3 */
+.uma-list-musics-page {
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.sec3-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    border: 1px solid steelblue;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+.header-topic-uma-list {
+    display: flex;
+    width: 85%;
+    gap: 20px;
+}
+.header-topic-uma-list p {
+    font-size: 26px;
+    font-weight: bold;
+}
+.content-line {
+    width: 85%;
+    height: 1px;
+    background-color: steelblue;
+}
+.container-uma-list {
+    display: grid;
+    width: 85%;
+    height: 220px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    grid-template-columns: repeat(9, auto);
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    /* transition: transform 0.3s ease; */
+}
+.container-uma-list.active {
+    height: auto;
+}
+.container-cercle-uma {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* .container-cercle-uma:hover {
+    background-color: purple;
+} */
+/* .uma-name {
+    margin-left: 30px;
+} */
+.container-cercle-uma img {
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.3s ease;
+}
+.container-cercle-uma img:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+.button-content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    bottom: -50px;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+.button-content a {
+    text-decoration: none;
+}
+.button-show-hide {
+    display: flex;
+    border: 1px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    background-color: steelblue;
+}
+.button-show-hide p {
+    color: white;
+    font-size: 40px;
+}
+.button-show-hide:hover {
+    transform: scale(0.9);
+}
+
+.spe {border: 1px solid purple;}
+
+/* section4 */
+.content-musics-list {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.grid-musics-list {
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 65px;
+}
+.container-musics-box {
+    display: flex;
+    border-radius: 15px;
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+
+}
+.container-musics-box img {
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.3s ease;
+
+}
+.container-musics-box img:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
