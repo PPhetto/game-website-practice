@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/Index.css">
-    <link rel="stylesheet" href="contents_top.css">
+    <link rel="stylesheet" href="/game-website-practice/css/Index.css">
+    <link rel="stylesheet" href="/game-website-practice/uma_musume_content_page/contents_top.css">
 </head>
 <body>
     <div id="header-contentstop"></div>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="right-contentstop">
-                <a href="game.html">
+                <a href="/game-website-practice/uma_musume_content_page/game.html">
                     <div class="container-right-contentstop">
                         <p>
                             Game
@@ -48,7 +48,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="anime.html">
+                <a href="/game-website-practice/uma_musume_content_page/anime.html">
                     <div class="container-right-contentstop">
                         <p>
                             Anime
@@ -58,7 +58,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="musics.html">
+                <a href="/game-website-practice/uma_musume_content_page/musics.html">
                     <div class="container-right-contentstop">
                         <p>
                             Music
@@ -68,7 +68,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="comics.html">
+                <a href="/game-website-practice/uma_musume_content_page/comics.html">
                     <div class="container-right-contentstop">
                         <p>
                             Comics
@@ -78,7 +78,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="event.html">
+                <a href="/game-website-practice/uma_musume_content_page/event.html">
                     <div class="container-right-contentstop">
                         <p>
                             Event
@@ -94,11 +94,11 @@
     <div id="footer-contentstop"></div>
     <script>
         const videoPlay = [
-            "../video/video-R_HMkF3G.mp4",
-            "../video/video-l3WFpvDF.mp4",
-            "../video/video-9qgWlAHJ.mp4",
-            "../video/video-6bN4yDqW.mp4",
-            "../video/video-KTlMQ9h0.mp4",
+            "/game-website-practice/video/video-R_HMkF3G.mp4",
+            "/game-website-practice/video/video-l3WFpvDF.mp4",
+            "/game-website-practice/video/video-9qgWlAHJ.mp4",
+            "/game-website-practice/video/video-6bN4yDqW.mp4",
+            "/game-website-practice/video/video-KTlMQ9h0.mp4",
         ]
 
         const showVideo = document.getElementById("video-contents-active");
@@ -120,7 +120,7 @@
             });
         });
 
-        fetch("../Fetch/header.html")
+        fetch("/game-website-practice/Fetch/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header-contentstop").innerHTML = html;
@@ -133,7 +133,7 @@
                     showDropdrow.classList.toggle("active");
                 });
             });
-        fetch("../Fetch/footer.html")
+        fetch("/game-website-practice/Fetch/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer-contentstop").innerHTML = html;

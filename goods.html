@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="/game-website-practice/css/Index.css">
 </head>
 <body>
     <div id="header-goodspage"></div>
@@ -18,7 +18,7 @@
             <div class="banner-cygame">
                 <a href="#">
                     <div class="box-banner-cygame">
-                        <img src="uma musume web try-to-do/bnr_cystore-IPwEb5Wx.png" alt="">
+                        <img src="/game-website-practice/uma musume web try-to-do/bnr_cystore-IPwEb5Wx.png" alt="">
                     </div>
                 </a>
             </div>
@@ -85,7 +85,7 @@
         </main>
     </div>
     <div id="footer-goodspage"></div>
-    <script src="js/goodsdata.js"></script>
+    <script src="/game-website-practice/js/goodsdata.js"></script>
     <script>
         const goodslist = document.querySelector(".list-information-joho ul");
         const pagination = document.getElementById("pagination");
@@ -166,7 +166,7 @@
         rendergoods(currentpage);
         renderPagination();
 
-        fetch("Fetch/header.html")
+        fetch("/game-website-practice/Fetch/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header-goodspage").innerHTML = html;
@@ -179,7 +179,7 @@
                     showDropdrow.classList.toggle("active");
                 });
             });
-        fetch("Fetch/footer.html")
+        fetch("/game-website-practice/Fetch/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer-goodspage").innerHTML = html;

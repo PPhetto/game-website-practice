@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="/game-website-practice/css/Index.css">
     <title>Document</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
 
     <div id="footer-news"></div>
 
-    <script src="js/newsdata.js"></script>
+    <script src="/game-website-practice/js/newsdata.js"></script>
     <script>
 // call-js-info
         const list = document.getElementById("card-news-list");
@@ -89,7 +89,7 @@
                 list.innerHTML += `
                 <li>
                     <a href="#">
-                        ${n.image ? `<img src="uma musume web try-to-do/${n.image}" alt="">` : ""}
+                        ${n.image ? `<img src="/game-website-practice/uma musume web try-to-do/${n.image}" alt="">` : ""}
                         <dl>
                             <dd>
                                 <label>${n.category}</label>
@@ -165,13 +165,13 @@
         renderPagination();
 
 // fetch-all
-        fetch("Fetch/footer.html")
+        fetch("/game-website-practice/Fetch/footer.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("footer-news").innerHTML = html;
             });
 
-        fetch("Fetch/header.html")
+        fetch("/game-website-practice/Fetch/header.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("header").innerHTML = html;
