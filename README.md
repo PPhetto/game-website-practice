@@ -15,6 +15,9 @@ A practice project for building a game-themed website layout using HTML, CSS, an
 - Navigation menu
 - Character / Content pages
 - Static website (no backend)
+- Dynamic content rendering
+- Category filtering (Newspage)
+- Random character display (Homepage)
 
 ## 📸 Screenshots
 # Home Page
