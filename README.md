@@ -1,21 +1,35 @@
-This website create for leaning HTML, CSS and Javascript
+# Game Website Practice
+A practice project for building a game-themed website layout using HTML, CSS, and JavaScript.
+โปรเจกต์ฝึกสร้างเว็บไซต์ธีมเกม เพื่อฝึกการทำ layout และโครงสร้างเว็บไซต์ด้วย HTML, CSS และ JavaScript
 
-## Note
+## 🌐 Demo
+👉 https://pphetto.github.io/game-website-practice/
 
-This website was created for learning and portfolio purposes only.
+## 🛠 Tech Stack
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-It is a practice project where I tried to recreate an existing website layout.
-All images, logos, and content belong to their original owners.
+## ✨ Features
+- Multi-page website structure
+- Navigation menu
+- Character / Content pages
+- Static website (no backend)
 
-This project is not for commercial use and does not generate any profit.
+## 📸 Screenshots
+# Home Page
+![Home](screenshot/home.png)
+# About Page
+![About](screenshot/about.jpg)
+# Content Page
+![Content](screenshot/content.png)
+# News Page
+![News](screenshot/news.jpg)
 
----
+## 🚀 How to Run Locally
+Just open `index.html` in your browser.
+หรือใช้ Live Server ใน VS Code
 
-## หมายเหตุ
-
-เว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษาและใช้เป็นผลงาน (Portfolio) เท่านั้น
-
-เป็นโปรเจกต์ฝึกทำเว็บโดยลองทำตามรูปแบบของเว็บไซต์ที่มีอยู่จริง  
-รูปภาพ โลโก้ และเนื้อหาทั้งหมดเป็นของเจ้าของผลงานเดิม
-
-ไม่มีการนำไปใช้เชิงพาณิชย์หรือสร้างรายได้
+## 📌 Notes
+This project was created for learning purposes and portfolio practice.
+โปรเจกต์นี้จัดทำขึ้นเพื่อฝึกฝนและใช้เป็นผลงานใน Portfolio
